@@ -3,44 +3,122 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>OpenClaw — 12 Free Tools</title>
-<meta name="description" content="12 free web tools. No accounts. No tracking. Works offline.">
+<title>OpenClaw — 12 Free Web Tools</title>
+<meta name="description" content="12 free web tools that work offline. No accounts, no tracking. AI listing critic, WiFi cards, habit tracker, color palettes, construction calculator, and more.">
+<meta property="og:title" content="OpenClaw — 12 Free Web Tools">
+<meta property="og:description" content="Free tools that work offline. No accounts, no tracking. Your data stays in your browser.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://magic-dev-kz.github.io/openclaw/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="OpenClaw — 12 Free Web Tools">
+<link rel="canonical" href="https://magic-dev-kz.github.io/openclaw/">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐾</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{background:#0a0a0a;color:#f5f5f5;font-family:-apple-system,BlinkMacSystemFont,sans-serif;padding:24px 16px;min-height:100vh}
-.w{max-width:720px;margin:0 auto}
-h1{font-size:2rem;font-weight:800;margin-bottom:8px}
-.s{color:#888;margin-bottom:32px;line-height:1.5}
-.s b{color:#ef4444}
-.g{display:grid;gap:12px}
-.c{background:#151515;border:1px solid #252525;border-radius:12px;padding:16px 20px;display:flex;align-items:center;gap:16px;text-decoration:none;color:#f5f5f5;transition:border-color .2s,transform .15s}
-.c:hover{border-color:#ef4444;transform:translateY(-2px)}
-.e{font-size:2rem;width:48px;text-align:center;flex-shrink:0}
-.i{flex:1}.n{font-weight:700;font-size:1.05rem;margin-bottom:2px}.d{color:#888;font-size:.85rem}
-.b{font-size:.7rem;padding:2px 8px;border-radius:99px;font-weight:600;flex-shrink:0;background:rgba(239,68,68,.15);color:#ef4444}
-.f{margin-top:40px;text-align:center;color:#888;font-size:.8rem;line-height:1.6}
-.f a{color:#ef4444;text-decoration:none}
+body{
+  background:#08080c;
+  background-image:radial-gradient(ellipse 60% 40% at 20% 10%,rgba(239,68,68,0.06),transparent),
+    radial-gradient(ellipse 50% 50% at 80% 80%,rgba(99,102,241,0.05),transparent);
+  color:#f5f5f5;
+  font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  padding:32px 16px 48px;
+  min-height:100vh;
+  line-height:1.5
+}
+.w{max-width:760px;margin:0 auto}
+.hero{text-align:center;margin-bottom:48px;padding-top:24px}
+h1{font-size:2.5rem;font-weight:900;letter-spacing:-0.03em;
+  background:linear-gradient(135deg,#f5f5f5 0%,#ef4444 50%,#f97316 100%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  background-clip:text;margin-bottom:12px}
+.tagline{color:#9ca3af;font-size:1.1rem;line-height:1.6;max-width:520px;margin:0 auto}
+.tagline b{color:#ef4444;font-weight:700}
+.badge-row{display:flex;justify-content:center;gap:12px;margin-top:20px;flex-wrap:wrap}
+.badge{font-size:.75rem;padding:4px 14px;border-radius:99px;font-weight:600;
+  border:1px solid rgba(255,255,255,0.08);color:#9ca3af;background:rgba(255,255,255,0.03)}
+.badge svg{width:14px;height:14px;vertical-align:-2px;margin-right:4px}
+
+.section-label{font-size:.7rem;text-transform:uppercase;letter-spacing:.12em;
+  color:#6b7280;font-weight:700;margin-bottom:16px;padding-left:4px}
+.g{display:grid;gap:10px;margin-bottom:40px}
+.c{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);
+  border-radius:14px;padding:16px 20px;display:flex;align-items:center;gap:16px;
+  text-decoration:none;color:#f5f5f5;transition:all .25s cubic-bezier(0.4,0,0.2,1);
+  position:relative;overflow:hidden}
+.c::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(239,68,68,0.05),transparent);
+  opacity:0;transition:opacity .25s}
+.c:hover{border-color:rgba(239,68,68,0.3);transform:translateY(-2px);
+  box-shadow:0 8px 32px rgba(239,68,68,0.08),0 2px 8px rgba(0,0,0,0.3)}
+.c:hover::before{opacity:1}
+.c:focus-visible{outline:2px solid #ef4444;outline-offset:2px}
+.e{font-size:2rem;width:48px;text-align:center;flex-shrink:0;position:relative;z-index:1;
+  transition:transform .3s cubic-bezier(0.34,1.56,0.64,1)}
+.c:hover .e{transform:scale(1.15) rotate(-5deg)}
+.i{flex:1;position:relative;z-index:1}
+.n{font-weight:700;font-size:1.05rem;margin-bottom:2px;letter-spacing:-0.01em}
+.d{color:#9ca3af;font-size:.85rem;line-height:1.4}
+.tag{font-size:.65rem;padding:2px 10px;border-radius:99px;font-weight:600;flex-shrink:0;
+  position:relative;z-index:1}
+.tag-ai{background:rgba(239,68,68,.12);color:#ef4444}
+.tag-new{background:rgba(34,197,94,.12);color:#22c55e}
+
+.f{text-align:center;color:#6b7280;font-size:.8rem;line-height:1.8}
+.f a{color:#ef4444;text-decoration:none;font-weight:600;transition:color .2s}
+.f a:hover{color:#f97316}
+
+@media(max-width:480px){
+  h1{font-size:2rem}
+  .tagline{font-size:.95rem}
+  .c{padding:14px 16px;gap:12px}
+  .e{font-size:1.6rem;width:40px}
+  .n{font-size:.95rem}
+}
 </style>
 </head>
 <body>
 <div class="w">
-<h1>OpenClaw</h1>
-<p class="s"><b>12 free tools</b> that work offline. No accounts. No tracking. Your data stays in your browser.</p>
-<div class="g">
-<a class="c" href="https://magic-dev-kz.github.io/roast-my-listing/"><span class="e">🔥</span><div class="i"><div class="n">Roast My Listing</div><div class="d">AI critiques your listing and rewrites it to sell</div></div><span class="b">AI</span></a>
-<a class="c" href="https://magic-dev-kz.github.io/wificard/"><span class="e">📶</span><div class="i"><div class="n">WifiCard</div><div class="d">Beautiful printable WiFi cards with QR codes</div></div></a>
-<a class="c" href="https://magic-dev-kz.github.io/decode-my-boss/"><span class="e">🔓</span><div class="i"><div class="n">Decode My Boss</div><div class="d">AI translates corporate double-speak</div></div><span class="b">AI</span></a>
-<a class="c" href="https://magic-dev-kz.github.io/drift/"><span class="e">🌊</span><div class="i"><div class="n">Drift</div><div class="d">Habit tracker without guilt. Just momentum.</div></div></a>
-<a class="c" href="https://magic-dev-kz.github.io/three-wins/"><span class="e">🏆</span><div class="i"><div class="n">Three Wins</div><div class="d">Write 3 wins daily. Build a streak.</div></div></a>
-<a class="c" href="https://magic-dev-kz.github.io/dualtone/"><span class="e">🎨</span><div class="i"><div class="n">DualTone</div><div class="d">Color palette with WCAG and color blind preview</div></div></a>
-<a class="c" href="https://magic-dev-kz.github.io/buildcalc/"><span class="e">🏗️</span><div class="i"><div class="n">BuildCalc</div><div class="d">Construction calculator + shopping list</div></div></a>
-<a class="c" href="https://magic-dev-kz.github.io/uniswap/"><span class="e">🔄</span><div class="i"><div class="n">UniSwap</div><div class="d">Unit converter with favorites</div></div></a>
-<a class="c" href="https://magic-dev-kz.github.io/passphrase/"><span class="e">🛡️</span><div class="i"><div class="n">PassPhrase</div><div class="d">Password generator + strength checker</div></div></a>
-<a class="c" href="https://magic-dev-kz.github.io/pollenpal/"><span class="e">🌿</span><div class="i"><div class="n">PollenPal</div><div class="d">Pollen forecast for allergy sufferers</div></div></a>
-<a class="c" href="https://magic-dev-kz.github.io/winlog/"><span class="e">📓</span><div class="i"><div class="n">WinLog</div><div class="d">Success journal with charts and voice input</div></div></a>
-<a class="c" href="https://magic-dev-kz.github.io/deep-work/"><span class="e">⏱️</span><div class="i"><div class="n">Deep Work</div><div class="d">Focus timer with heatmap and daily goals</div></div></a>
+<div class="hero">
+  <h1>OpenClaw</h1>
+  <p class="tagline"><b>12 free tools</b> that work offline. No accounts. No tracking. Your data stays in your browser.</p>
+  <div class="badge-row">
+    <span class="badge">Free forever</span>
+    <span class="badge">Works offline</span>
+    <span class="badge">Open source</span>
+    <span class="badge">No tracking</span>
+  </div>
 </div>
-<div class="f">Free. Open source. Offline. Your data never leaves your browser.<br><a href="https://github.com/magic-dev-kz">GitHub</a></div>
+
+<p class="section-label">AI-Powered</p>
+<div class="g">
+<a class="c" href="https://magic-dev-kz.github.io/roast-my-listing/"><span class="e">🔥</span><div class="i"><div class="n">Roast My Listing</div><div class="d">AI critiques your marketplace listing and rewrites it to sell</div></div><span class="tag tag-ai">AI</span></a>
+<a class="c" href="https://magic-dev-kz.github.io/decode-my-boss/"><span class="e">🔓</span><div class="i"><div class="n">Decode My Boss</div><div class="d">AI translates corporate double-speak into plain English</div></div><span class="tag tag-ai">AI</span></a>
+</div>
+
+<p class="section-label">Productivity</p>
+<div class="g">
+<a class="c" href="https://magic-dev-kz.github.io/drift/"><span class="e">🌊</span><div class="i"><div class="n">Drift</div><div class="d">Habit tracker without guilt. No streaks, just momentum.</div></div></a>
+<a class="c" href="https://magic-dev-kz.github.io/three-wins/"><span class="e">🏆</span><div class="i"><div class="n">Three Wins</div><div class="d">Write 3 wins daily. Build a streak. Share your fire.</div></div></a>
+<a class="c" href="https://magic-dev-kz.github.io/winlog/"><span class="e">📓</span><div class="i"><div class="n">WinLog</div><div class="d">Success journal with voice input, charts, and mood tracking</div></div></a>
+<a class="c" href="https://magic-dev-kz.github.io/deep-work/"><span class="e">⏱️</span><div class="i"><div class="n">Deep Work</div><div class="d">Focus timer with heatmap, tags, and daily goals</div></div></a>
+</div>
+
+<p class="section-label">Utilities</p>
+<div class="g">
+<a class="c" href="https://magic-dev-kz.github.io/wificard/"><span class="e">📶</span><div class="i"><div class="n">WifiCard</div><div class="d">Beautiful printable WiFi guest cards with QR codes</div></div></a>
+<a class="c" href="https://magic-dev-kz.github.io/dualtone/"><span class="e">🎨</span><div class="i"><div class="n">DualTone</div><div class="d">Color palette generator with WCAG contrast and Tailwind export</div></div></a>
+<a class="c" href="https://magic-dev-kz.github.io/buildcalc/"><span class="e">🏗️</span><div class="i"><div class="n">BuildCalc</div><div class="d">Construction calculator with shopping list and unit converter</div></div></a>
+<a class="c" href="https://magic-dev-kz.github.io/uniswap/"><span class="e">🔄</span><div class="i"><div class="n">UniSwap</div><div class="d">Unit converter with favorites and conversion history</div></div></a>
+<a class="c" href="https://magic-dev-kz.github.io/passphrase/"><span class="e">🛡️</span><div class="i"><div class="n">PassPhrase</div><div class="d">Password generator with strength meter and auto-clear</div></div></a>
+<a class="c" href="https://magic-dev-kz.github.io/pollenpal/"><span class="e">🌿</span><div class="i"><div class="n">PollenPal</div><div class="d">Pollen forecast with safety score and medication reminders</div></div></a>
+</div>
+
+<div class="f">
+  Free. Open source. Offline-first. Your data never leaves your browser.<br>
+  <a href="https://github.com/magic-dev-kz">GitHub</a>
+</div>
 </div>
 </body>
 </html>
